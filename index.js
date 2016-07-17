@@ -14,7 +14,7 @@ server.on('request', function(req, res) {
 });
 */
 // start the server
-server.listen(port,host, function(err) {
+server.listen(port,function(err) {
   if (err) {
     return console.log('Encountered error starting server: ', err);
   }
