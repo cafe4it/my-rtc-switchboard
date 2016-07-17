@@ -19,7 +19,7 @@ server.listen(port,host, function(err) {
     return console.log('Encountered error starting server: ', err);
   }
 
-  console.log('server running at '+server_ip_address+':' + server_port + '/');
+  console.log('server running at '+host+':' + port + '/');
 });
 
 // add the repl
