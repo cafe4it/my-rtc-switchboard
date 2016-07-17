@@ -15,6 +15,16 @@ server.listen(server_port, function(err) {
   console.log('server running at '+server_ip_address+':' + server_port + '/');
 });
 
+server.on('request', function(req, res) {
+  if (req.url === '/') {
+    res.writeHead(302, {
+      'Location': 'https://github.com/rtc-io/rtc-switchboard'
+    });
+    res.end('switchboard available from: https://github.com/rtc-io/rtc-switchboard');
+  }
+});
+
+
 replify({
   name: 'switchboard',
   app: switchboard,
